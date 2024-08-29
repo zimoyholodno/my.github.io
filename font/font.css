@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Freckle Face';
+    src: url('FreckleFace-Regular.eot');
+    src: local('Freckle Face'), local('FreckleFace-Regular'),
+        url('FreckleFace-Regular.eot?#iefix') format('embedded-opentype'),
+        url('FreckleFace-Regular.woff2') format('woff2'),
+        url('FreckleFace-Regular.woff') format('woff'),
+        url('FreckleFace-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
