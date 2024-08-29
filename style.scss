@@ -1,0 +1,607 @@
+$button-bg: #fff;
+$button-text-color: #fff;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background: url("./img/фон.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.main {
+    position: fixed;
+    display: flex;
+    width: 1331px;
+    height: 615px;
+    top: 90px;
+    background: url("./img/back.jpg") no-repeat center center ;
+    background-size: 100% 100%;
+
+    &__img {
+        position: absolute;
+        height: 615px;
+        top: 0; 
+        right: 0;
+    }
+
+    &__img1 {
+        width: 549px;
+        margin-top: 69px;
+        margin-left: 400px;
+        position: absolute;
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: center;
+    }
+
+    &__logo {
+        margin-left: 110px;
+        font-size: 84px;
+        color: #fff;
+        font-family: 'Freckle Face';
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        #one {
+            font-size: 42px;
+        }
+    }
+
+    &__button {
+        background-color: #fff;
+        border: none;
+        width: 200px;
+        height: 61px;
+        margin-top: 100px;
+        margin-left: 110px;
+        border-radius: 50px;
+        position: relative;
+        font-size: 26px;
+        font-family: 'Didact Gothic';
+        cursor: pointer;
+        transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+        box-shadow: 0 2px 25px rgba(149, 2, 255, 0.5);
+        -webkit-appearance: none;
+        appearance: none;
+
+        img {
+            height: 60px;
+            float: left;
+            padding: 0;
+        }
+
+        #test {
+            padding-top: 10px;
+        }
+
+        &:focus {
+            outline: 0;
+          }
+          
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 140%;
+            height: 100%;
+            left: -20%;
+            z-index: -1000;
+            transition: all ease-in-out 0.5s;
+            background-repeat: no-repeat;
+          }
+          
+          &:before {
+            display: none;
+            top: -75%;
+            background-image:  
+              radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle,  transparent 20%, $button-bg 20%, transparent 30%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%), 
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle,  transparent 10%, $button-bg 15%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%);
+          background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+          //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+          }
+          
+          &:after {
+            display: none;
+            bottom: -75%;
+            background-image:  
+            radial-gradient(circle, $button-bg 20%, transparent 20%), 
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle,  transparent 10%, $button-bg 15%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%);
+          background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+          //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+          }
+         
+          &:active {
+            transform: scale(0.9);
+            background-color: darken($button-bg, 5%);
+            box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+    
+          }
+        }
+    
+
+    &__text {
+        width: 280px;
+        color: #fff;
+        font-family: 'Didact Gothic';
+        font-size: 16px;     
+        margin-left: 920px; 
+        position: absolute;
+        text-align: justify;
+        align-self: center;
+    }
+}
+
+
+.authorization {
+    display: none;
+    position: absolute;
+    // width: 633px;
+    width: 40%;
+    height: 90%;
+    background: url("./img/gojo.png") no-repeat center center;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 30px;
+    animation: ani 2.5s forwards;
+    border: #fff 3px solid;
+
+    &__x {
+        margin-top: 5px;
+        margin-left: 20px;
+        position: absolute;
+        a {
+            color: #fff;
+            font-family: 'Freckle Face';    
+            font-size: 44px;
+            text-decoration: none;
+        }
+
+        cursor: pointer;
+    }
+
+    &__logo {
+        margin-top: 10px;
+        font-size: 44px;
+        color: #fff;
+        font-family: 'Freckle Face';
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        #one {
+            font-size: 32px;
+        }
+    }
+
+    &__window {
+        color: #fff;
+        font-family: 'Didact Gothic';
+        font-size: 44px;
+        text-align: center;
+        margin-top: 20px;
+        width: 100%;
+        height: 73px;
+        background: rgba(255, 187, 55, 0.5);
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        width: 242px;
+        text-align: center;
+        color: #fff;
+        font-family: 'Didact Gothic';
+        font-size: 32px;
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+
+    &__login {
+        display: flex;
+        flex-direction: column;
+
+        input {
+            height: 50px;
+            border-radius: 50px;
+            font-family: 'Didact Gothic';
+            font-size: 22px;
+            padding-left: 10px;
+            border: rgba(255, 187, 55, 0.5);
+            margin-top: 20px;
+        }
+    }
+    
+    &__password {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+
+        input {
+            height: 50px;
+            border-radius: 50px;
+            font-family: 'Didact Gothic';
+            font-size: 22px;
+            padding-left: 10px;
+            border: rgba(255, 187, 55, 0.5);
+            margin-top: 20px;
+        }
+    }
+
+    &__rows {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 100px 40px 0px 40px;
+    }
+
+    &__enter {
+        background-color: #fff;
+        border: none;
+        width: 200px;
+        height: 61px;
+        border-radius: 50px;
+        position: relative;
+        font-size: 30px;
+        font-family: 'Didact Gothic';
+        cursor: pointer;
+        transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+        box-shadow: 0 2px 25px rgba(149, 2, 255, 0.5);
+        -webkit-appearance: none;
+        appearance: none;
+
+        img {
+            height: 60px;
+            float: left;
+            padding: 0;
+        }
+
+        #test {
+            padding-top: 10px;
+        }
+
+        &:focus {
+            outline: 0;
+          }
+          
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 140%;
+            height: 100%;
+            left: -20%;
+            z-index: -1000;
+            transition: all ease-in-out 0.5s;
+            background-repeat: no-repeat;
+          }
+          
+          &:before {
+            display: none;
+            top: -75%;
+            background-image:  
+              radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle,  transparent 20%, $button-bg 20%, transparent 30%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%), 
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle,  transparent 10%, $button-bg 15%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%);
+          background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+          //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+          }
+          
+          &:after {
+            display: none;
+            bottom: -75%;
+            background-image:  
+            radial-gradient(circle, $button-bg 20%, transparent 20%), 
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle,  transparent 10%, $button-bg 15%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%);
+          background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+          //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+          }
+         
+          &:active {
+            transform: scale(0.9);
+            background-color: darken($button-bg, 5%);
+            box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+    
+          }
+    }
+
+    &__registration {
+        background-color: #fff;
+        border: none;
+        width: 300px;
+        height: 61px;
+        border-radius: 50px;
+        position: relative;
+        font-size: 30px;
+        font-family: 'Didact Gothic';
+        cursor: pointer;
+        transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+        box-shadow: 0 2px 25px rgba(149, 2, 255, 0.5);
+        -webkit-appearance: none;
+        appearance: none;
+
+        img {
+            height: 60px;
+            float: left;
+            padding: 0;
+        }
+
+        #test {
+            padding-top: 10px;
+        }
+
+        &:focus {
+            outline: 0;
+          }
+          
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 140%;
+            height: 100%;
+            left: -20%;
+            z-index: -1000;
+            transition: all ease-in-out 0.5s;
+            background-repeat: no-repeat;
+          }
+          
+          &:before {
+            display: none;
+            top: -75%;
+            background-image:  
+              radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle,  transparent 20%, $button-bg 20%, transparent 30%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%), 
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle,  transparent 10%, $button-bg 15%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%);
+          background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+          //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+          }
+          
+          &:after {
+            display: none;
+            bottom: -75%;
+            background-image:  
+            radial-gradient(circle, $button-bg 20%, transparent 20%), 
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle,  transparent 10%, $button-bg 15%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%);
+          background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+          //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+          }
+         
+          &:active {
+            transform: scale(0.9);
+            background-color: darken($button-bg, 5%);
+            box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+    
+          }
+   }
+}
+
+@keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.registration {
+    display: none;
+    position: absolute;
+    // width: 633px;
+    // height: 800px;
+    height: 90%;
+    width: 40%;
+    background: url("./img/sad_gojo.jpg") no-repeat center center;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 30px;  
+    animation: ani 2.5s forwards;
+    background-size: 100% 100%;
+    border: #fff 3px solid;
+    
+
+    &__x {
+        margin-top: 5px;
+        margin-left: 20px;
+        position: absolute;
+        a {
+            color: #fff;
+            font-family: 'Freckle Face';    
+            font-size: 44px;
+            text-decoration: none;
+        }
+
+        cursor: pointer;
+    }
+
+    &__logo {
+        margin-top: 10px;
+        font-size: 44px;
+        color: #fff;
+        font-family: 'Freckle Face';
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        #one {
+            font-size: 32px;
+        }
+    }
+
+    &__window {
+        color: #fff;
+        font-family: 'Didact Gothic';
+        font-size: 44px;
+        text-align: center;
+        margin-top: 20px;
+        width: 100%;
+        height: 73px;
+        background: rgba(26, 51, 137, 0.69);
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        width: 242px;
+        text-align: center;
+        color: #fff;
+        font-family: 'Didact Gothic';
+        font-size: 32px;
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+
+    &__login {
+        display: flex;
+        flex-direction: column;
+
+        input {
+            height: 50px;
+            border-radius: 50px;
+            font-family: 'Didact Gothic';
+            font-size: 22px;
+            padding-left: 10px;
+            border: rgba(255, 187, 55, 0.5);
+            margin-top: 20px;
+        }
+    }
+    
+    &__password {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+
+        input {
+            height: 50px;
+            border-radius: 50px;
+            font-family: 'Didact Gothic';
+            font-size: 22px;
+            padding-left: 10px;
+            border: rgba(255, 187, 55, 0.5);
+            margin-top: 20px;
+        }
+    }
+
+    &__enter {
+        margin: 100px 200px 0px 200px;
+        background-color: #fff;
+        border: none;
+        width: 200px;
+        height: 61px;
+        border-radius: 50px;
+        position: relative;
+        font-size: 30px;
+        font-family: 'Didact Gothic';
+        cursor: pointer;
+        transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+        box-shadow: 0 2px 25px rgba(149, 2, 255, 0.5);
+        -webkit-appearance: none;
+        appearance: none;
+
+        img {
+            height: 60px;
+            float: left;
+            padding: 0;
+        }
+
+        #test {
+            padding-top: 10px;
+        }
+
+        &:focus {
+            outline: 0;
+          }
+          
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 140%;
+            height: 100%;
+            left: -20%;
+            z-index: -1000;
+            transition: all ease-in-out 0.5s;
+            background-repeat: no-repeat;
+          }
+          
+          &:before {
+            display: none;
+            top: -75%;
+            background-image:  
+              radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle,  transparent 20%, $button-bg 20%, transparent 30%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%), 
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle,  transparent 10%, $button-bg 15%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%);
+          background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+          //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+          }
+          
+          &:after {
+            display: none;
+            bottom: -75%;
+            background-image:  
+            radial-gradient(circle, $button-bg 20%, transparent 20%), 
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle,  transparent 10%, $button-bg 15%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%);
+          background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+          //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+          }
+         
+          &:active {
+            transform: scale(0.9);
+            background-color: darken($button-bg, 5%);
+            box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+    
+          }
+    }
+}

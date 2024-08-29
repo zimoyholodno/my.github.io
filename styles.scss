@@ -1,0 +1,187 @@
+$button-bg: #fff;
+$button-text-color: #fff;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background: url("./img/image\ \(2\).png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.main {
+    position: fixed;
+    display: flex;
+    width: 1331px;
+    height: 615px;
+    top: 90px;
+    background: url("./img/внеш\ \(2\).jpg") no-repeat center center ;
+    background-size: 100% 100%;
+
+    &__place {
+        // background: rgba(0, 0, 0, 0.418);
+        // display: flex;
+        width: 90%;
+        height: 80%;
+        align-self: center;
+        margin: auto;
+        border-radius: 0 0 50px 50px;
+    }
+
+    &__write {
+        position: absolute;
+        margin: 460px 66.55px 0px 66.55px;
+        width: 90%;
+        display: flex;
+        align-self: center;
+        justify-content: space-between;
+    }
+
+    &__button {
+        background-color: #fff;
+        border: none;
+        width: 220px;
+        height: 61px;
+        border-radius: 50px;
+        position: relative;
+        font-size: 26px;
+        font-family: 'Didact Gothic';
+        cursor: pointer;
+        transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+        box-shadow: 0 2px 25px rgba(149, 2, 255, 0.5);
+        -webkit-appearance: none;
+        appearance: none;
+        margin-right: 10px;
+
+        img {
+            height: 60px;
+            float: left;
+            padding: 0;
+        }
+
+        #test {
+            padding-top: 10.5px;
+        }
+
+        &:focus {
+            outline: 0;
+          }
+          
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 140%;
+            height: 100%;
+            left: -20%;
+            z-index: -1000;
+            transition: all ease-in-out 0.5s;
+            background-repeat: no-repeat;
+          }
+          
+          &:before {
+            display: none;
+            top: -75%;
+            background-image:  
+              radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle,  transparent 20%, $button-bg 20%, transparent 30%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%), 
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle,  transparent 10%, $button-bg 15%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%);
+          background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+          //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+          }
+          
+          &:after {
+            display: none;
+            bottom: -75%;
+            background-image:  
+            radial-gradient(circle, $button-bg 20%, transparent 20%), 
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle,  transparent 10%, $button-bg 15%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%),
+            radial-gradient(circle, $button-bg 20%, transparent 20%);
+          background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+          //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+          }
+         
+          &:active {
+            transform: scale(0.9);
+            background-color: darken($button-bg, 5%);
+            box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+    
+          }
+        }
+    
+    input {
+        width: 75%;
+        height: 61px;
+        border-radius: 50px;
+        font-family: 'Didact Gothic';
+        font-size: 22px;
+        padding-left: 10px;
+        border: rgba(255, 187, 55, 0.5);
+        margin-left: 10px;
+    }
+
+    &__soo {
+        float: right;
+        width: 40%;
+        height: 50%;
+        // position: absolute;
+        margin-right: 5%;
+        background: url("./img/сообщение.png")  no-repeat center center;
+        background-size: cover;
+    }
+}
+
+.side {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-self: flex-start;
+    
+    img {
+        width: 180px;
+        opacity: 80%;
+    }
+}
+
+#one {
+    z-index: 1000;
+}
+
+#two {
+    margin-top: -60px;
+    z-index: 200;
+}
+
+#three {
+    margin-top: -80px;
+    width: 150px;
+    z-index: 100;
+}
+
+#four {
+    margin-top: -50px;
+    z-index: 50;
+}
+
+#five {
+    margin-top: -50px;
+    width: 155px;
+    z-index: 100;
+}
+

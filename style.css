@@ -1,0 +1,471 @@
+@charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  background: url("./img/фон.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.main {
+  position: fixed;
+  display: flex;
+  width: 1331px;
+  height: 615px;
+  top: 90px;
+  background: url("./img/back.jpg") no-repeat center center;
+  background-size: 100% 100%;
+}
+.main__img {
+  position: absolute;
+  height: 615px;
+  top: 0;
+  right: 0;
+}
+.main__img1 {
+  width: 549px;
+  margin-top: 69px;
+  margin-left: 400px;
+  position: absolute;
+}
+.main__col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+}
+.main__logo {
+  margin-left: 110px;
+  font-size: 84px;
+  color: #fff;
+  font-family: "Freckle Face";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__logo #one {
+  font-size: 42px;
+}
+.main__button {
+  background-color: #fff;
+  border: none;
+  width: 200px;
+  height: 61px;
+  margin-top: 100px;
+  margin-left: 110px;
+  border-radius: 50px;
+  position: relative;
+  font-size: 26px;
+  font-family: "Didact Gothic";
+  cursor: pointer;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(149, 2, 255, 0.5);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+.main__button img {
+  height: 60px;
+  float: left;
+  padding: 0;
+}
+.main__button #test {
+  padding-top: 10px;
+}
+.main__button:focus {
+  outline: 0;
+}
+.main__button:before, .main__button:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.main__button:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, transparent 20%, #fff 20%, transparent 30%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, transparent 10%, #fff 15%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.main__button:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, transparent 10%, #fff 15%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.main__button:active {
+  transform: scale(0.9);
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+.main__text {
+  width: 280px;
+  color: #fff;
+  font-family: "Didact Gothic";
+  font-size: 16px;
+  margin-left: 920px;
+  position: absolute;
+  text-align: justify;
+  align-self: center;
+}
+
+.authorization {
+  display: none;
+  position: absolute;
+  width: 40%;
+  height: 90%;
+  background: url("./img/gojo.png") no-repeat center center;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 30px;
+  animation: ani 2.5s forwards;
+  border: #fff 3px solid;
+}
+.authorization__x {
+  margin-top: 5px;
+  margin-left: 20px;
+  position: absolute;
+  cursor: pointer;
+}
+.authorization__x a {
+  color: #fff;
+  font-family: "Freckle Face";
+  font-size: 44px;
+  text-decoration: none;
+}
+.authorization__logo {
+  margin-top: 10px;
+  font-size: 44px;
+  color: #fff;
+  font-family: "Freckle Face";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.authorization__logo #one {
+  font-size: 32px;
+}
+.authorization__window {
+  color: #fff;
+  font-family: "Didact Gothic";
+  font-size: 44px;
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+  height: 73px;
+  background: rgba(255, 187, 55, 0.5);
+}
+.authorization__col {
+  display: flex;
+  flex-direction: column;
+  width: 242px;
+  text-align: center;
+  color: #fff;
+  font-family: "Didact Gothic";
+  font-size: 32px;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+.authorization__login {
+  display: flex;
+  flex-direction: column;
+}
+.authorization__login input {
+  height: 50px;
+  border-radius: 50px;
+  font-family: "Didact Gothic";
+  font-size: 22px;
+  padding-left: 10px;
+  border: rgba(255, 187, 55, 0.5);
+  margin-top: 20px;
+}
+.authorization__password {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.authorization__password input {
+  height: 50px;
+  border-radius: 50px;
+  font-family: "Didact Gothic";
+  font-size: 22px;
+  padding-left: 10px;
+  border: rgba(255, 187, 55, 0.5);
+  margin-top: 20px;
+}
+.authorization__rows {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 100px 40px 0px 40px;
+}
+.authorization__enter {
+  background-color: #fff;
+  border: none;
+  width: 200px;
+  height: 61px;
+  border-radius: 50px;
+  position: relative;
+  font-size: 30px;
+  font-family: "Didact Gothic";
+  cursor: pointer;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(149, 2, 255, 0.5);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+.authorization__enter img {
+  height: 60px;
+  float: left;
+  padding: 0;
+}
+.authorization__enter #test {
+  padding-top: 10px;
+}
+.authorization__enter:focus {
+  outline: 0;
+}
+.authorization__enter:before, .authorization__enter:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.authorization__enter:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, transparent 20%, #fff 20%, transparent 30%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, transparent 10%, #fff 15%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.authorization__enter:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, transparent 10%, #fff 15%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.authorization__enter:active {
+  transform: scale(0.9);
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+.authorization__registration {
+  background-color: #fff;
+  border: none;
+  width: 300px;
+  height: 61px;
+  border-radius: 50px;
+  position: relative;
+  font-size: 30px;
+  font-family: "Didact Gothic";
+  cursor: pointer;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(149, 2, 255, 0.5);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+.authorization__registration img {
+  height: 60px;
+  float: left;
+  padding: 0;
+}
+.authorization__registration #test {
+  padding-top: 10px;
+}
+.authorization__registration:focus {
+  outline: 0;
+}
+.authorization__registration:before, .authorization__registration:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.authorization__registration:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, transparent 20%, #fff 20%, transparent 30%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, transparent 10%, #fff 15%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.authorization__registration:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, transparent 10%, #fff 15%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.authorization__registration:active {
+  transform: scale(0.9);
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+
+@keyframes ani {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.registration {
+  display: none;
+  position: absolute;
+  height: 90%;
+  width: 40%;
+  background: url("./img/sad_gojo.jpg") no-repeat center center;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 30px;
+  animation: ani 2.5s forwards;
+  background-size: 100% 100%;
+  border: #fff 3px solid;
+}
+.registration__x {
+  margin-top: 5px;
+  margin-left: 20px;
+  position: absolute;
+  cursor: pointer;
+}
+.registration__x a {
+  color: #fff;
+  font-family: "Freckle Face";
+  font-size: 44px;
+  text-decoration: none;
+}
+.registration__logo {
+  margin-top: 10px;
+  font-size: 44px;
+  color: #fff;
+  font-family: "Freckle Face";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.registration__logo #one {
+  font-size: 32px;
+}
+.registration__window {
+  color: #fff;
+  font-family: "Didact Gothic";
+  font-size: 44px;
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+  height: 73px;
+  background: rgba(26, 51, 137, 0.69);
+}
+.registration__col {
+  display: flex;
+  flex-direction: column;
+  width: 242px;
+  text-align: center;
+  color: #fff;
+  font-family: "Didact Gothic";
+  font-size: 32px;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+.registration__login {
+  display: flex;
+  flex-direction: column;
+}
+.registration__login input {
+  height: 50px;
+  border-radius: 50px;
+  font-family: "Didact Gothic";
+  font-size: 22px;
+  padding-left: 10px;
+  border: rgba(255, 187, 55, 0.5);
+  margin-top: 20px;
+}
+.registration__password {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.registration__password input {
+  height: 50px;
+  border-radius: 50px;
+  font-family: "Didact Gothic";
+  font-size: 22px;
+  padding-left: 10px;
+  border: rgba(255, 187, 55, 0.5);
+  margin-top: 20px;
+}
+.registration__enter {
+  margin: 100px 200px 0px 200px;
+  background-color: #fff;
+  border: none;
+  width: 200px;
+  height: 61px;
+  border-radius: 50px;
+  position: relative;
+  font-size: 30px;
+  font-family: "Didact Gothic";
+  cursor: pointer;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(149, 2, 255, 0.5);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+.registration__enter img {
+  height: 60px;
+  float: left;
+  padding: 0;
+}
+.registration__enter #test {
+  padding-top: 10px;
+}
+.registration__enter:focus {
+  outline: 0;
+}
+.registration__enter:before, .registration__enter:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.registration__enter:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, transparent 20%, #fff 20%, transparent 30%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, transparent 10%, #fff 15%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.registration__enter:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, transparent 10%, #fff 15%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.registration__enter:active {
+  transform: scale(0.9);
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,6 @@
+{
+    "require": {
+        "php": "^8.2.22",
+        "mysql/mysql-dev": "^2.0.1"
+    }
+}

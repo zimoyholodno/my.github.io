@@ -1,0 +1,150 @@
+@charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  background: url("./img/image (2).png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.main {
+  position: fixed;
+  display: flex;
+  width: 1331px;
+  height: 615px;
+  top: 90px;
+  background: url("./img/внеш (2).jpg") no-repeat center center;
+  background-size: 100% 100%;
+}
+.main__place {
+  width: 90%;
+  height: 80%;
+  align-self: center;
+  margin: auto;
+  border-radius: 0 0 50px 50px;
+}
+.main__write {
+  position: absolute;
+  margin: 460px 66.55px 0px 66.55px;
+  width: 90%;
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+}
+.main__button {
+  background-color: #fff;
+  border: none;
+  width: 220px;
+  height: 61px;
+  border-radius: 50px;
+  position: relative;
+  font-size: 26px;
+  font-family: "Didact Gothic";
+  cursor: pointer;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(149, 2, 255, 0.5);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  margin-right: 10px;
+}
+.main__button img {
+  height: 60px;
+  float: left;
+  padding: 0;
+}
+.main__button #test {
+  padding-top: 10.5px;
+}
+.main__button:focus {
+  outline: 0;
+}
+.main__button:before, .main__button:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.main__button:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, transparent 20%, #fff 20%, transparent 30%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, transparent 10%, #fff 15%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.main__button:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, transparent 10%, #fff 15%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%), radial-gradient(circle, #fff 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.main__button:active {
+  transform: scale(0.9);
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+.main input {
+  width: 75%;
+  height: 61px;
+  border-radius: 50px;
+  font-family: "Didact Gothic";
+  font-size: 22px;
+  padding-left: 10px;
+  border: rgba(255, 187, 55, 0.5);
+  margin-left: 10px;
+}
+.main__soo {
+  float: right;
+  width: 40%;
+  height: 50%;
+  margin-right: 5%;
+  background: url("./img/сообщение.png") no-repeat center center;
+  background-size: cover;
+}
+
+.side {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-self: flex-start;
+}
+.side img {
+  width: 180px;
+  opacity: 80%;
+}
+
+#one {
+  z-index: 1000;
+}
+
+#two {
+  margin-top: -60px;
+  z-index: 200;
+}
+
+#three {
+  margin-top: -80px;
+  width: 150px;
+  z-index: 100;
+}
+
+#four {
+  margin-top: -50px;
+  z-index: 50;
+}
+
+#five {
+  margin-top: -50px;
+  width: 155px;
+  z-index: 100;
+}/*# sourceMappingURL=styles.css.map */

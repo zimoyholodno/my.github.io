@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./font/font.css">
+    <link rel="stylesheet" href="./font/DidactGothic-Regular/style.css">
+    <link rel="stylesheet" href="./button.js">
+    <title>главная</title>
+    <script src="./button.js">
+    </script>
+</head>
+<body>
+    <div class="main">
+        <img src="./img/Rectangle 1.png" class="main__img">
+        <img src="./img/тихиро.png" class="main__img1">
+        <div class="main__col">
+            <div class="main__logo">
+                SECRETS
+            <div id="one">
+                秘密
+            </div>    
+            </div>
+            <button onclick="Click_main()" class="main__button"> 
+                <img src="./img/лог.png" id="button_image">
+                <div id="test">
+                    войти
+                </div>
+            </button>
+        </div>
+        <div class="main__text">
+            сайт для хранения твоих мыслей
+            — это онлайн-платформа, 
+            предназначенная для удобного и
+            безопасного хранения личных
+            записей, заметок и других важных данных. 
+        </div>
+    </div>
+
+    <!-- ОКНО АВТОРИЗАЦИИ -->
+    <div class="authorization" >
+        <div class="authorization__x">
+            <a href="" onclick="closed()">x</a>
+        </div>
+        <div class="authorization__logo">
+            SECRETS
+           <div id="one">
+            秘密
+           </div>    
+        </div>
+        <div class="authorization__window">
+            авторизация
+        </div>
+        <div class="authorization__col">
+            <div class="authorization__login">
+               логин
+               <input type="text"> 
+            </div>
+            <div class="authorization__password">
+                пароль
+                <input type="password">
+            </div>
+        </div>
+        <div class="authorization__rows">
+            <button class="authorization__enter"> 
+                <img src="./img/лог.png" id="button_image">
+                <div id="test">
+                    войти
+                </div>
+            </button>
+            <button class="authorization__registration" onclick="open_reg()"> 
+                <img src="./img/лог.png" id="button_image">
+                <div id="test">
+                    регистрация
+                </div>
+            </button>
+        </div>
+    </div>
+    
+    <!-- ОКНО РЕГИСТРАЦИИ -->
+    <div class="registration">
+        <div class="registration__x">
+            <a href="" onclick="closed_reg()">x</a>
+        </div>
+        <div class="registration__logo">
+            SECRETS
+           <div id="one">
+            秘密
+           </div>    
+        </div>
+        <div class="registration__window">
+            регистрация
+        </div>
+        <div class="registration__col">
+            <div class="registration__login">
+               логин
+               <input type="text"> 
+            </div>
+            <div class="registration__password">
+                пароль
+                <input type="password">
+            </div>
+        </div>
+        <button class="registration__enter"> 
+            <img src="./img/лог.png" id="button_image">
+            <div id="test">
+                войти
+            </div>
+        </button>
+    </div>
+</body>
+</html>
